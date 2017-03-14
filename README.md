@@ -11,7 +11,7 @@ Clone this repository:
     
 Build the JAR file:
 
-    $ mvn jar:jar
+    $ mvn package
     ...
     [INFO] Building jar: /home/avsej/tmp/fieldfilter/target/field-filter-1.0-SNAPSHOT.jar
     ...
