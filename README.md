@@ -1,6 +1,12 @@
-# Field Filter for Couchbase Kafka Connector
+# This repo is obsolete
 
-This repository contains example of filtering class for [Couchbase Kafka Connector](github.com/couchbase/kafka-connect-couchbase).
+For a modern example of filtering with the Couchbase Kafka connector, please see the [custom extensions example project](https://github.com/couchbase/kafka-connect-couchbase/tree/master/examples/custom-extensions) in the [kafka-connect-couchbase](https://github.com/couchbase/kafka-connect-couchbase) repository.
+
+---
+
+# Field Filter for Couchbase Kafka Connector 3.x
+
+This repository contains example of filtering class for [Couchbase Kafka Connector](https://github.com/couchbase/kafka-connect-couchbase).
 
 ## Quickstart
 
@@ -8,15 +14,15 @@ Clone this repository:
 
     $ git clone git://github.com/couchbaselabs/kafka-example-filter.git
     $ cd kafka-example-filter
-    
+
 Build the JAR file:
 
     $ mvn package
     ...
     [INFO] Building jar: /home/avsej/tmp/fieldfilter/target/field-filter-1.0-SNAPSHOT.jar
     ...
-    
-Put the jar into connector classpath. For example, if you have connector installed in 
+
+Put the jar into connector classpath. For example, if you have connector installed in
 `/usr/share/java/kafka-connect-couchbase/`, the easiest way to use this filter would be
 to copy it into the same directory.
 
@@ -27,7 +33,7 @@ Next step is to configure connector to use this filter instead of default
 property in connector configuration:
 
     event.filter.class=example.FieldFilter
-    
+
 ## Implementation
 
 The implementation of `example.FieldFilter` is simple. It takes all mutation messages
